@@ -5,7 +5,7 @@ agent any
         stage('Git_checkout'){
             
             steps {
-                git 'https://github.com/asquarezone/spring-petclinic.git'
+                git 'https://github.com/sahooashok709/petclinic.git'
             }
         }
         
