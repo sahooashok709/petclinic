@@ -5,7 +5,7 @@ agent any
         stage('Git_checkout'){
             
             steps {
-                git 'https://github.com/sahooashok709/petclinic.git'
+                git branch: 'master', url: 'https://github.com/sahooashok709/petclinic.git'
             }
         }
         
