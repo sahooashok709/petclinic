@@ -14,6 +14,13 @@ agent any
                 sh 'mvn clean install'
             }
         }
+        stage('SonarAnalysis') {
+            steps {
+                withSonarQubeENV('sonarqube_mine') {
+                    sh 'mvn sonar:sonar'
+                }
+            }
+        }
         
         stage("deploy_in_tomcat"){
             steps{
